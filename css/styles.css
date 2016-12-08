@@ -1,0 +1,263 @@
+/* Some Variables to Make Life Easier */
+/* Basic Resets */
+* {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+  font-family: 'Roboto', arial, sans-serif;
+  background-color: #fafafa;
+  color: #4b4b4b; }
+
+/* Link Styles */
+a {
+  text-decoration: none; }
+
+/* Helpers */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.ta-r {
+  text-align: right; }
+
+.ta-l {
+  text-align: left; }
+
+.ta-c {
+  text-align: center; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+blockquote {
+  background-color: #fff;
+  padding: 1rem; }
+  blockquote .oversized-quotes {
+    font-size: 56px;
+    line-height: 1; }
+
+/* Basic Styles */
+.main-header,
+.nav {
+  display: flex;
+  flex-direction: column; }
+
+.main-header {
+  padding: 1rem;
+  background-color: #fafafa; }
+  .main-header h1.page-title {
+    margin: .75rem 0 1.25rem;
+    font-size: 1.5rem;
+    align-self: center; }
+  .main-header .main-nav ul.nav {
+    padding: 0;
+    margin: 0; }
+    .main-header .main-nav ul.nav li {
+      list-style: none;
+      margin-bottom: 10px; }
+      .main-header .main-nav ul.nav li a {
+        text-align: center;
+        color: #4b4b4b;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #fff;
+        display: block;
+        padding: .75rem;
+        border-bottom: 3px solid transparent;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out; }
+        .main-header .main-nav ul.nav li a:hover {
+          color: black;
+          border-bottom-color: #4b4b4b; }
+
+h2.section-header {
+  text-transform: uppercase;
+  margin: 2rem 0 3.5rem;
+  font-size: 1rem;
+  text-align: center; }
+
+.main-content .profile-section {
+  padding: 0 1rem 1rem; }
+  .main-content .profile-section .profile-details .profile-image-wrapper {
+    text-align: center; }
+    .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto; }
+      .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .profile-image {
+        padding: 1.5rem 2.5rem; }
+      .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container {
+        position: absolute;
+        right: 1rem;
+        top: .5rem; }
+        .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container .speech-bubble {
+          font-weight: bold;
+          font-size: 1rem;
+          border: 1px dashed white;
+          background: #fff;
+          text-align: center;
+          border-radius: 2.5rem;
+          padding: 1rem;
+          position: relative; }
+          .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container .speech-bubble:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border: 10px solid;
+            border-color: #fff transparent transparent #fff;
+            position: absolute;
+            bottom: -20px;
+            left: 20px; }
+  .main-content .profile-section .profile-details .header-blurb-container p.header-blurb {
+    text-align: center;
+    font-weight: 300;
+    color: #989898; }
+
+.main-content .portfolio-section {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center; }
+  .main-content .portfolio-section .portfolio-wrapper .portfolio-item h3.portfolio-title {
+    font-weight: normal;
+    margin: 1rem 0; }
+  .main-content .portfolio-section .portfolio-wrapper .portfolio-item p.portfolio-blurb {
+    font-weight: 300;
+    margin-bottom: 2rem; }
+
+footer {
+  color: #7e7e7e;
+  padding: 1rem; }
+  footer .contact-section {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 4rem; }
+    footer .contact-section h2.section-header {
+      margin-bottom: 2rem; }
+    footer .contact-section p.contact-blurb {
+      margin-bottom: 3rem; }
+    footer .contact-section p.contact-details span {
+      margin-left: 1rem;
+      font-weight: 500;
+      color: #7e7e7e; }
+  footer .subfooter-section {
+    border-top: 1px solid #e6e6e6;
+    padding: 2rem 0;
+    font-size: .95rem;
+    font-weight: 600; }
+    footer .subfooter-section .footer-nav {
+      display: none; }
+      footer .subfooter-section .footer-nav li {
+        display: inline-block; }
+        footer .subfooter-section .footer-nav li a {
+          color: #4b4b4b; }
+          footer .subfooter-section .footer-nav li a:hover {
+            color: black; }
+    footer .subfooter-section .back-to-top {
+      text-transform: uppercase; }
+      footer .subfooter-section .back-to-top a {
+        color: #4b4b4b; }
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+  .main-header {
+    padding: 2rem;
+    justify-content: flex-end; }
+    .main-header .main-nav {
+      align-self: center; }
+      .main-header .main-nav ul.nav {
+        flex-direction: row; }
+        .main-header .main-nav ul.nav li {
+          padding-left: 1rem;
+          padding-right: 1rem; }
+          .main-header .main-nav ul.nav li a {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent; }
+  .main-content .profile-section .profile-details .profile-image-wrapper {
+    width: 50%;
+    float: right; }
+    .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .profile-image {
+      padding: 1.5rem .5rem 1.5rem 2.5rem; }
+  .main-content .profile-section .profile-details .header-blurb-container {
+    width: 50%;
+    float: left; }
+    .main-content .profile-section .profile-details .header-blurb-container p.header-blurb {
+      padding-top: .5rem;
+      text-align: left; }
+  .main-content .portfolio-section .portfolio-item {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: inline-block;
+    width: 50%;
+    float: left; }
+    .main-content .portfolio-section .portfolio-item:nth-child(2n + 1) {
+      clear: left; }
+  footer .contact-section {
+    padding: 0 10rem; }
+  footer .subfooter-section ul.footer-nav {
+    display: block;
+    margin: 0;
+    padding: 0; }
+    footer .subfooter-section ul.footer-nav li {
+      margin-left: 1rem; }
+      footer .subfooter-section ul.footer-nav li a {
+        font-size: .80rem;
+        text-transform: uppercase; }
+  footer .subfooter-section .back-to-top {
+    display: none; } }
+
+/* Styles for even larger screens */
+@media screen and (min-width: 1025px) {
+  .main-header {
+    padding: 2rem 0;
+    flex-direction: row; }
+    .main-header h1.page-title {
+      margin-right: auto;
+      margin-left: 1rem; }
+    .main-header .main-nav {
+      margin-left: auto;
+      margin-right: 2.5rem; }
+      .main-header .main-nav ul.nav li {
+        margin-right: 0;
+        margin-left: 1rem; }
+        .main-header .main-nav ul.nav li a {
+          padding-left: 0;
+          padding-right: 0; }
+  .main-content .portfolio-section .portfolio-item {
+    width: 33.3%; }
+    .main-content .portfolio-section .portfolio-item:nth-child(2n + 1) {
+      clear: none; }
+    .main-content .portfolio-section .portfolio-item:nth-child(3n + 1) {
+      clear: left; }
+  .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container {
+    position: absolute;
+    top: 20px;
+    opacity: 0;
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out; }
+    .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container .speech-bubble {
+      font-size: 2rem;
+      padding: 1rem; }
+      .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container .speech-bubble-container .speech-bubble:before {
+        left: 30px; }
+  .main-content .profile-section .profile-details .profile-image-wrapper .profile-image-inner-container:hover .speech-bubble-container {
+    top: 0px;
+    opacity: 1; }
+  footer .contact-section {
+    padding: 0 10rem; }
+  footer .back-to-top {
+    display: none; } }
